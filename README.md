@@ -16,7 +16,7 @@ npm run storybook
 ```
 
 ### Trouble Shooting
-1. Error: error:0308010C:digital envelope routines::unsupported<br>
+##### 1. Error: error:0308010C:digital envelope routines::unsupported<br>
 (Node.js version control)
 ![스크린샷 2022-04-21 오후 11 38 25](https://user-images.githubusercontent.com/76719920/164483427-47de146c-79ea-4b05-9831-17b3748d27ed.png)
 
