@@ -10,10 +10,6 @@
 npx -p @storybook/cli sb init
 ```
 
-### Run
-```
-npm run storybook
-```
 
 ### Trouble Shooting
 ##### 1. Error: error:0308010C:digital envelope routines::unsupported<br>
