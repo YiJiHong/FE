@@ -1,16 +1,14 @@
 <template>
-  <router-view />
+  <div>new</div>
 </template>
-
 <script lang="ts">
 import { defineComponent } from 'vue';
-// import { useQuasar } from 'quasar';
 
 export default defineComponent({
-  name: 'App',
+  name: 'SignUp',
+
   setup() {
-    // const $q = useQuasar();
-    // $q.dark.set(true);
+    //
   },
 });
 </script>
