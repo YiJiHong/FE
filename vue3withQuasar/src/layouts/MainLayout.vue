@@ -1,27 +1,30 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated class="bg-teal">
+    <q-header class="bg-white">
       <q-toolbar>
         <q-btn
           flat
           dense
           round
+          color="black"
           icon="menu"
           aria-label="Menu"
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> ONEGO </q-toolbar-title>
+        <q-toolbar-title>
+          <q-img src="~/assets/logo_black.jpg" width="672px" height="242px" />
+        </q-toolbar-title>
 
         <darkmode-toggle />
+
         <div class="q-pa-md q-gutter-sm">
           <q-btn-dropdown
             split
             class="glossy"
-            color="white"
-            text-color="black"
+            color="teal"
+            text-color="white"
             label="LOG IN"
-            @click="loginSubmit"
           >
             <q-list>
               <q-item clickable>
@@ -40,7 +43,7 @@
             </q-list>
           </q-btn-dropdown>
 
-          <q-btn color="white" text-color="black" label="회원가입" />
+          <q-btn color="teal" text-color="white" label="회원가입" />
         </div>
       </q-toolbar>
     </q-header>
@@ -56,7 +59,6 @@
         />
       </q-list>
     </q-drawer>
-
     <q-page-container>
       <router-view />
     </q-page-container>

@@ -86,6 +86,7 @@ module.exports = configure(function (ctx) {
 
     // https://v2.quasar.dev/quasar-cli-webpack/quasar-config-js#Property%3A-framework
     framework: {
+      cssAddon: 'true',
       config: {
         dark: 'auto', // or Boolean true/false
       },
@@ -101,7 +102,7 @@ module.exports = configure(function (ctx) {
       // directives: [],
 
       // Quasar plugins
-      plugins: ['Notify'],
+      plugins: ['Notify', 'LocalStorage'],
     },
 
     // animations: 'all', // --- includes all animations
