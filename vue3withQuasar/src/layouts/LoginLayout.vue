@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated class="bg-teal">
       <q-toolbar>
-        <q-toolbar-title> ONEGO </q-toolbar-title> <darkmode-toggle
+        <img src="../assets/logo_white.png" /><darkmode-toggle
       /></q-toolbar>
     </q-header>
 

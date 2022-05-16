@@ -3,9 +3,9 @@
     <div v-if="darkMode">
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        viewBox="0 0 16 16"
+        width="25"
+        height="25"
+        viewBox="0 0 25 25"
         fill="currentColor"
         class="bi bi-moon-stars-fill none:event"
       >
@@ -21,9 +21,9 @@
     <div v-else>
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="16"
-        height="16"
-        viewBox="0 0 16 16"
+        width="25"
+        height="25"
+        viewBox="0 0 25 25"
         fill="currentColor"
       >
         <path

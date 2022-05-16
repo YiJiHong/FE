@@ -1,29 +1,26 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header class="bg-white">
+    <q-header elevated class="bg-teal">
       <q-toolbar>
         <q-btn
           flat
           dense
           round
-          color="black"
+          color="white"
           icon="menu"
           aria-label="Menu"
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title>
-          <q-img src="~/assets/logo_black.jpg" width="672px" height="242px" />
-        </q-toolbar-title>
+        <img src="../assets/logo_white.png" />
 
         <darkmode-toggle />
-
         <div class="q-pa-md q-gutter-sm">
           <q-btn-dropdown
             split
             class="glossy"
-            color="teal"
-            text-color="white"
+            color="white"
+            text-color="black"
             label="LOG IN"
           >
             <q-list>
@@ -43,22 +40,23 @@
             </q-list>
           </q-btn-dropdown>
 
-          <q-btn color="teal" text-color="white" label="회원가입" />
+          <q-btn color="white" text-color="black" label="회원가입" />
         </div>
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
+    <q-drawer class="bg-grey-3" v-model="leftDrawerOpen">
       <q-list>
         <q-item-label header> </q-item-label>
 
-        <EssentialLink
-          v-for="link in essentialLinks"
+        <SidebarMenu
+          v-for="link in sidebarMenus"
           :key="link.title"
           v-bind="link"
         />
       </q-list>
     </q-drawer>
+
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -67,8 +65,9 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import EssentialLink from 'components/EssentialLink.vue';
+import SidebarMenu from 'components/SidebarMenu.vue';
 import DarkmodeToggle from 'src/components/DarkmodeToggle.vue';
+// import SignupPage from 'pages/SignUp.vue';
 
 const linksList = [
   {
@@ -116,24 +115,29 @@ const linksList = [
 ];
 
 export default defineComponent({
-  name: 'MainLayout',
+  name: 'MainPage',
 
   components: {
-    EssentialLink,
+    SidebarMenu,
     DarkmodeToggle,
   },
-
+  // methods: {
+  //   SignupPage() {},
+  // },
   setup() {
     {
       const leftDrawerOpen = ref(false);
 
       return {
-        essentialLinks: linksList,
+        sidebarMenus: linksList,
         text: ref(''),
         leftDrawerOpen,
         toggleLeftDrawer() {
           leftDrawerOpen.value = !leftDrawerOpen.value;
         },
+        // SignupPage() {
+        //   window.location.href = '../pages/SignUp.vue';
+        // },
       };
     }
   },
