@@ -16,31 +16,21 @@
 
         <darkmode-toggle />
         <div class="q-pa-md q-gutter-sm">
-          <q-btn-dropdown
+          <q-btn
             split
             class="glossy"
             color="white"
             text-color="black"
             label="LOG IN"
-          >
-            <q-list>
-              <q-item clickable>
-                <q-item-section>
-                  <q-input v-model="text" label="ID" />
-                </q-item-section>
-                <q-item-section side> </q-item-section>
-              </q-item>
+            to="Login"
+          />
 
-              <q-item clickable>
-                <q-item-section>
-                  <q-input v-model="text" label="PASSWORD" />
-                </q-item-section>
-                <q-item-section side> </q-item-section>
-              </q-item>
-            </q-list>
-          </q-btn-dropdown>
-
-          <q-btn color="white" text-color="black" label="회원가입" />
+          <q-btn
+            color="white"
+            text-color="black"
+            label="회원가입"
+            to="/Signup"
+          />
         </div>
       </q-toolbar>
     </q-header>

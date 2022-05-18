@@ -17,7 +17,7 @@ import { defineComponent } from 'vue';
 import DarkmodeToggle from 'src/components/DarkmodeToggle.vue';
 
 export default defineComponent({
-  name: 'LoginLayout',
+  name: 'SignupLayout',
 
   components: {
     DarkmodeToggle,
